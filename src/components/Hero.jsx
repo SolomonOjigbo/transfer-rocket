@@ -3,6 +3,8 @@ import { styles } from "../styles";
 // import { ComputersCanvas } from "./canvas";
 import { AppStoreBnt, GooglePlayBnt } from "../assets";
 import ReactPlayer from 'react-player'
+import Lottie from "lottie-react";
+import animationfile from "../assets/animation.json"
 
 
 const Hero = () => {
@@ -11,7 +13,7 @@ const Hero = () => {
       <div
         className={`relative inset-10 top-[180px] mx-10 max-w-7xl ${styles.paddingX} flex items-center gap-10 mb-60 `}
       >
-       <div className={`relative flex flex-col gap-10 mx-10 py-50`}>
+       <div className={`relative flex flex-col gap-0 md:flex-row mx-10 py-10`}>
        {/* flex-col md:flex-row */}
         <div className="flex-col md:w-1/2 lg:w-full mt-10">
           <div>
@@ -33,6 +35,9 @@ const Hero = () => {
           <img src={GooglePlayBnt} style={{height:50}} alt="GooglePlay" />
           </a>
         </div>
+        </div>
+        <div className="flex-col md:w-1/2 mt-10">
+        <Lottie animationData={animationfile} loop={true} style={{width: "100%"}} />
         </div>
 
        

@@ -7,6 +7,9 @@ import { newFeatures, reasons } from '../constants';
 import Features from './Features';
 import CarouselSlider from './carousel/Carousel';
 import { AppStoreBnt, GooglePlayBnt } from '../assets';
+import { motion } from "framer-motion";
+import { fadeIn, slideIn, textVariant } from "../utils/motion";
+import {MobileBanner }from "../assets"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,7 +91,68 @@ const WhatsNew = () => {
         </div>
         <div className="sm:w-1/2 w-full">
           {/* <img src="/whats-new.png" alt="whatsnew" className="w-full" /> */}
-          <CarouselSlider />
+          {/* <CarouselSlider /> */}
+          <div
+      
+      className='w-full orange-gradient p-[1px] rounded-[20px] '
+    >
+      <motion.div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        animate={{
+          x: [0, 24, 0],
+        }}
+        transition={{
+          duration: 4.5,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+        
+        className='bg-#e4dfdf border-spacing-1 rounded-[20px] py-5 px-12 min-h-[380px] flex justify-evenly items-center flex-col -ml-60'
+      >
+        <img
+          src={MobileBanner}
+          alt='How it Works'
+          // className='w-full object-contain'
+        />
+      
+      </motion.div>
+      <motion.div
+          animate={{
+            x: [3, 24, 0],
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          variants={fadeIn("right", "spring")}
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+
+        //   variants={{
+        //   hidden: { opacity: 0.7, y: 75},
+        //   visible: { opacity: 1 , y: 0},
+        // }}
+        // transition={{ duration: 3000, easing: 400, delay: 300}}
+        // initial="hidden"
+        // animate="visible"
+        
+        className='bg-transparent border-spacing-1 rounded-[20px] mb-20 py-8 px-12 min-h-[380px] flex justify-evenly items-center flex-col -mt-80 -mr-60'
+      >
+        <img
+          src="/rocket-signin.png"
+          alt='How it Works'
+          // className='w-full object-contain'
+        />
+      </motion.div>
+    </div>
         </div>
       </div>
     </section>
