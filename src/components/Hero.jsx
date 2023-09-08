@@ -7,12 +7,12 @@ import ReactPlayer from 'react-player'
 
 const Hero = () => {
   return (
-    <section className={` relative max-h-[680px] flex flex-row`}>
+    <section className={` relative max-h-[400px] flex mb-70`}>
       <div
-        className={`relative inset-15 top-[180px] mx-auto max-w-7xl min-h-80 ${styles.paddingX} flex items-center gap-10 mb-60 `}
+        className={`relative inset-10 top-[180px] mx-10 max-w-7xl ${styles.paddingX} flex items-center gap-10 mb-60 `}
       >
-       <div className={`flex flex-col md:flex-row gap-10 mx-auto `}>
-
+       <div className={`relative flex flex-col gap-10 mx-10 py-50`}>
+       {/* flex-col md:flex-row */}
         <div className="flex-col md:w-1/2 lg:w-full mt-10">
           <div>
           <h1 className={`${styles.heroHeadText} text-green-700`}>
@@ -35,10 +35,7 @@ const Hero = () => {
         </div>
         </div>
 
-        <div className="flex md:w-1/2 lg:w-1/2 -my-5">
-
-    <ReactPlayer url='https://www.youtube.com/watch?v=YuZ7Y-EYB3E' loop={true} playing={true} muted={true} />
-        </div>
+       
           </div>
        
 
