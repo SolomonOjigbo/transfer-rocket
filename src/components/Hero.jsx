@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <section className={` relative max-h-[680px] flex flex-row`}>
       <div
-        className={`relative inset-15 top-[180px] mx-auto max-w-7xl min-h-80 ${styles.paddingX} flex items-center gap-10 mb-60 `}
+        className={`relative inset-15 top-[140px] mx-auto max-w-7xl min-h-80 ${styles.paddingX} flex items-center gap-10 mb-60 `}
       >
-       <div className={`flex flex-col md:flex-row gap-10 mx-auto `}>
+       <div className={`flex flex-col-reverse md:flex-row gap-10 mx-auto xs:mt-[150px] md:mt-10`}>
 
         <div className="flex-col md:w-1/2 lg:w-full mt-10">
           <div>
@@ -35,9 +35,13 @@ const Hero = () => {
         </div>
         </div>
 
-        <div className="flex md:w-1/2 lg:w-1/2 -my-5">
+        <div className="flex md:w-1/2 lg:w-1/2 -my-5 sm:w-full xs:w-full">
+    <div className="relative lg:w-[550px] md:w-[480px] lg:h-[480] xs:h-[360px] xs:w-[450px]">
 
-    <ReactPlayer url='https://www.youtube.com/watch?v=YuZ7Y-EYB3E' loop={true} playing={true} muted={true} />
+    <ReactPlayer url='https://www.youtube.com/watch?v=YuZ7Y-EYB3E' loop={true} playing={true} muted={true} width="100%" height="100%" style={{position: "absolute", top: 0, left: 0}}/>
+
+    </div>
+    
         </div>
           </div>
        
